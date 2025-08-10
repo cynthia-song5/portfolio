@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cynthia Song</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9ff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 4rem 0;
+        }
+
+        .hero-name {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-roles {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-role {
+            font-size: 1.5rem;
+            color: #667eea;
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-role:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-description {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #333;
+        }
+
+        .quick-links {
+            margin-bottom: 3rem;
+        }
+
+        .quick-links h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-card h4 {
+            color: #667eea;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .contact-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .work-section {
+            margin-top: 4rem;
+        }
+
+        .work-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .work-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+        }
+
+        .project-card:hover .project-header::before {
+            right: -20%;
+            top: -20%;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .project-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .project-date {
+            color: #888;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 2% auto;
+            padding: 0;
+            border-radius: 20px;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.05);
+            transform: rotate(45deg);
+        }
+
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            z-index: 10;
+            transition: transform 0.2s ease;
+        }
+
+        .close:hover {
+            transform: scale(1.1);
+        }
+
+        .modal-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .modal-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .modal-body {
+            padding: 3rem;
+        }
+
+        .modal-section {
+            margin-bottom: 2rem;
+        }
+
+        .modal-section h3 {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .modal-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modal-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .modal-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 0.8rem;
+        }
+
+        .skills-section {
+            background: rgba(102, 126, 234, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-item {
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .hero-name {
+                font-size: 3rem;
+            }
+
+            .hero-roles {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-description {
+                font-size: 1.4rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                margin: 5% auto;
+                max-width: 95%;
+            }
+
+            .modal-header,
+            .modal-body {
+                padding: 2rem;
+            }
+
+            .modal-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1 class="hero-name">cynthia song</h1>
+            <div class="hero-roles">
+                <span class="hero-role">developer</span>
+                <span class="hero-role">ai enthusiast</span>
+                <span class="hero-role">leader</span>
+            </div>
+            <div class="hero-description">
+                there's nothing i love doing more than coding, building AI solutions, and leading with purpose!
+            </div>
+
+            <div class="quick-links">
+                <h3>in a hurry? here's what I'm up to:</h3>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h4>interning as a software engineer @ AwareAbility Technologies</h4>
+                        <p>converting complex simulation workflows to Python & building interactive visualizations for x-ray production analysis</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>leading business development @ Twocents</h4>
+                        <p>spearheading college expansion across 20 universities & developing strategic CBA models for growth forecasting</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>mentoring the next generation @ Kode With Klossy</h4>
+                        <p>teaching web development & fostering tech inclusivity for 60+ young women and non-binary individuals</p>
+                    </div>
+                </div>
+            </div>
+
+            <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 2rem;">
+                i really love what i do. reach out for anything tech, AI, & product!
+            </p>
+
+            <div class="contact-links">
+                <a href="mailto:cynthiasong2006@gmail.com"><i class="fas fa-envelope"></i> email me</a>
+                <a href="https://github.com/cynthia-song5" target="_blank"><i class="fab fa-github"></i> github</a>
+                <a href="tel:614-556-6826"><i class="fas fa-phone"></i> call me</a>
+            </div>
+        </div>
+
+        <!-- Work Section -->
+        <div class="work-section">
+            <div class="work-header">
+                <h2 class="work-title">my work. ᕕ( ᐛ )ᕗ</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">passion projects & professional experiences!</p>
+                <p>there's quite a bit on here, so feel free to filter below ;) !</p>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">all!!!</button>
+                <button class="filter-btn" data-filter="develop">develop</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="leadership">leadership</button>
+                <button class="filter-btn" data-filter="research">research</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="modal-title"></h2>
+                <p class="modal-subtitle"></p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>What I Did</h3>
+                    <ul class="modal-list" id="modalAchievements"></ul>
+                </div>
+                <div class="modal-section">
+                    <h3>Impact & Results</h3>
+                    <p id="modalImpact"></p>
+                </div>
+                <div class="skills-section">
+                    <h3>Technologies & Skills Used</h3>
+                    <div class="skills-list" id="modalSkills"></div>
+                </div>
+                <div class="modal-section" id="modalExtra"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const projects = [
+            {
+                id: 'distress-detection',
+                title: 'AI-Powered Universal Distress Signal Detection',
+                subtitle: 'Emergency response system using computer vision & facial recognition',
+                tags: ['ai/ml', 'develop'],
+                date: '2024 - present',
+                description: 'Built a real-time AI system that detects universal distress hand gestures and facial emotions to automatically call emergency services.',
+                achievements: [
+                    'Implemented YOLOv8 for real-time object detection to identify universal distress hand gestures on personally labeled data',
+                    'Integrated facial emotion recognition model to detect fear and confirm distress situations',
+                    'Automated emergency response by connecting to 911 services using Twilio\'s API',
+                    'Trained models using custom dataset from Roboflow with continuous accuracy improvements'
+                ],
+                impact: 'Created a potentially life-saving application that could revolutionize emergency response by providing automatic distress detection in situations where victims cannot verbally call for help.',
+                skills: ['Python', 'YOLOv8', 'Computer Vision', 'Machine Learning', 'Twilio API', 'Roboflow', 'TensorFlow'],
+                category: ['ai', 'develop']
+            },
+            {
+                id: 'biomedical-research',
+                title: 'PhysioNet Challenge 2025',
+                subtitle: 'Machine learning for Chagas disease detection from ECG data',
+                tags: ['research', 'ai/ml'],
+                date: 'may 2025 - present',
+                description: 'Developed cutting-edge ML algorithms for medical diagnosis, achieving top 20 worldwide ranking.',
+                achievements: [
+                    'Developed open-source machine and deep learning algorithms to detect Chagas disease from 12-lead ECGs',
+                    'Utilized large-scale biomedical datasets for the prestigious PhysioNet Challenge 2025',
+                    'Improved challenge score (AUROC, AUPRC, Accuracy, F-measure) by 975% using XGBoost model',
+                    'Implemented hybrid feature selection techniques for optimal model performance',
+                    'Achieved 18th place worldwide ranking among global research teams'
+                ],
+                impact: 'Contributed to advancing medical AI diagnostics with potential to improve early detection of Chagas disease, affecting millions globally.',
+                skills: ['Python', 'XGBoost', 'Deep Learning', 'Feature Engineering', 'Medical Data Analysis', 'Scikit-learn'],
+                category: ['research', 'ai']
+            },
+            {
+                id: 'awareability',
+                title: 'AwareAbility Technologies',
+                subtitle: 'Software development intern - scientific computing & visualization',
+                tags: ['develop', 'research'],
+                date: 'may 2025 - present',
+                description: 'Modernized complex scientific simulation workflows and created interactive visualizations.',
+                achievements: [
+                    'Converted legacy Geant4 and ROOT-based simulation workflows to modern Python architecture',
+                    'Automated post-simulation data analysis pipelines, significantly reducing manual processing time',
+                    'Developed interactive visualizations for x-ray production efficiency analysis',
+                    'Created stakeholder communication tools for complex scientific data',
+                    'Optimized simulation parameter analysis for faster insights generation'
+                ],
+                impact: 'Accelerated research workflows and improved data accessibility, enabling faster scientific discoveries in medical imaging technology.',
+                skills: ['Python', 'Geant4', 'ROOT', 'Data Visualization', 'Scientific Computing', 'Automation'],
+                category: ['develop', 'research']
+            },
+            {
+                id: 'twocents',
+                title: 'Twocents',
+                subtitle: 'Business development lead - strategic expansion & financial modeling',
+                tags: ['leadership', 'develop'],
+                date: 'january 2025 - present',
+                description: 'Leading strategic business expansion across 20 universities with data-driven financial modeling.',
+                achievements: [
+                    'Led strategy and execution for Twocents\' college launch across 20 universities for AU2025',
+                    'Coordinated complex partnerships with university services and stakeholders',
+                    'Developed comprehensive CBA (Cost-Benefit Analysis) models using Microsoft Excel',
+                    'Created financial forecasting systems to identify potential revenue streams',
+                    'Established scalable processes for multi-university rollout'
+                ],
+                impact: 'Drove strategic growth initiative that expanded company reach to thousands of college students, establishing foundation for sustainable revenue growth.',
+                skills: ['Strategic Planning', 'Financial Modeling', 'Excel', 'Partnership Development', 'Project Management'],
+                category: ['leadership']
+            },
+            {
+                id: 'klossy',
+                title: 'Kode With Klossy',
+                subtitle: 'Instructor assistant - empowering diversity in tech',
+                tags: ['leadership', 'develop'],
+                date: 'march 2025 - present',
+                description: 'Teaching web development and fostering inclusive tech culture for underrepresented communities.',
+                achievements: [
+                    'Taught website development to over 60 young women and non-binary individuals',
+                    'Mentored students through hands-on coding projects and technical challenges',
+                    'Facilitated Culture-of-Tech sessions focused on accessibility and inclusivity',
+                    'Developed curriculum materials for diverse learning styles',
+                    'Created supportive learning environment for underrepresented groups in tech'
+                ],
+                impact: 'Contributed to closing the gender gap in technology by empowering the next generation of diverse tech leaders.',
+                skills: ['HTML/CSS', 'JavaScript', 'Teaching', 'Mentorship', 'Curriculum Development', 'Diversity & Inclusion'],
+                category: ['leadership', 'develop']
+            },
+            {
+                id: 'elevate',
+                title: 'Elevate Website',
+                subtitle: 'Full-stack platform connecting students with opportunities',
+                tags: ['develop'],
+                date: '2024',
+                description: 'Built a responsive web platform that earned investor recognition and scholarship funding.',
+                achievements: [
+                    'Developed and deployed responsive web platform connecting users with extracurricular opportunities',
+                    'Implemented comprehensive UI/UX verification features for seamless user experience',
+                    'Created dual-interface system serving both parents and business partners',
+                    'Built scalable architecture to handle multiple user types and use cases',
+                    'Presented to investor panel and secured scholarship funding'
+                ],
+                impact: 'Created platform with potential to transform how students discover and engage with extracurricular opportunities, earning investor validation.',
+                skills: ['Full-Stack Development', 'UI/UX Design', 'Responsive Design', 'User Experience', 'Product Development'],
+                category: ['develop']
+            },
+            {
+                id: 'discovery-lab',
+                title: 'Discovery Lab - Global (DLG)',
+                subtitle: 'Team lead - AI research & education development',
+                tags: ['leadership', 'research', 'ai/ml'],
+                date: 'may 2024 - august 2024',
+                description: 'Led research team analyzing AI decision-making and developed educational curriculum.',
+                achievements: [
+                    'Led 5-person interdisciplinary team to author technical paper on ChatGPT\'s role in decision-making',
+                    'Conducted comprehensive research on AI decision-making patterns and biases',
+                    'Designed AI Fundamentals course curriculum for non-technical learners',
+                    'Developed hands-on SmartPong project to make AI concepts accessible',
+                    'Created educational materials to support career growth in AI field'
+                ],
+                impact: 'Advanced AI research understanding while making AI education more accessible to diverse audiences through innovative curriculum design.',
+                skills: ['Research Leadership', 'Technical Writing', 'Curriculum Design', 'AI/ML', 'Team Management', 'Educational Development'],
+                category: ['leadership', 'research', 'ai']
+            }
+        ];
+
+        function renderProjects(filterCategory = 'all') {
+            const grid = document.getElementById('projectsGrid');
+            grid.innerHTML = '';
+
+            const filteredProjects = filterCategory === 'all' 
+                ? projects 
+                : projects.filter(project => project.category.includes(filterCategory));
+
+            filteredProjects.forEach(project => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'project-card';
+                projectCard.onclick = () => openModal(project);
+
+                projectCard.innerHTML = `
+                    <div class="project-header">
+                        <h3 class="project-title">${project.title}</h3>
+                        <p class="project-subtitle">${project.subtitle}</p>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
+                        </div>
+                        <div class="project-date">${project.date}</div>
+                        <p class="project-description">${project.description}</p>
+                    </div>
+                `;
+
+                grid.appendChild(projectCard);
+            });
+        }
+
+        function openModal(project) {
+            const modal = document.getElementById('projectModal');
+            const modalTitle = document.querySelector('.modal-title');
+            const modalSubtitle = document.querySelector('.modal-subtitle');
+            const modalAchievements = document.getElementById('modalAchievements');
+            const modalImpact = document.getElementById('modalImpact');
+            const modalSkills = document.getElementById('modalSkills');
+
+            modalTitle.textContent = project.title;
+            modalSubtitle.textContent = project.subtitle;
+            modalImpact.textContent = project.impact;
+
+            modalAchievements.innerHTML = '';
+            project.achievements.forEach(achievement => {
+                const li = document.createElement('li');
+                li.textContent = achievement;
+                modalAchievements.appendChild(li);
+            });
+
+            modalSkills.innerHTML = '';
+            project.skills.forEach(skill => {
+                const span = document.createElement('span');
+                span.className = 'skill-item';
+                span.textContent = skill;
+                modalSkills.appendChild(span);
+            });
+
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderProjects(btn.dataset.filter);
+            });
+        });
+
+        // Modal close functionality
+        document.querySelector('.close').onclick = function() {
+            document.getElementById('projectModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('projectModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Initialize
+        renderProjects();
+
+        // Smooth scroll for hero roles
+        document.querySelectorAll('.hero-role').forEach(role => {
+            role.addEventListener('click', () => {
+                document.querySelector('.work-section').scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            });
+        });
+    </script>
+</body>
+</html>
