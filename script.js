@@ -4,13 +4,25 @@ const projects = [
         title: 'AI-Powered Universal Distress Signal Detection',
         subtitle: 'Emergency response system using computer vision & facial recognition',
         tags: ['ai/ml', 'develop'],
-        date: '2024 - present',
-        description: 'Built a real-time AI system that detects universal distress hand gestures and facial emotions to automatically call emergency services.',
+        date: 'march 2024',
+        description: 'Built a real-time AI system that detects the universal distress signal and facial emotions to automatically call emergency services.',        
+        context: `In many emergencies, victims are unable to call for help. Instances of this include physical danger, domestic abuse, or language barriers. 
+        Traditional emergency response systems depend on active communication, leaving these countless incidents undetected. 
+        This project set out to create a silent, AI-powered safety mechanism to bridge that gap.`,
+        image: 'https://cdn-blog.findmykids.org/2023/08/The-Signal-for-Help-a-tool-that-may-help-some-people-who-do-not-have-the-ability-to-make-video-calls-1024x696.jpg',
+        whatTheProjectDid: `
+        A team of four, including me, developed a real-time system that detects two key distress signals: hand gestures and fear-based facial expressions. 
+        YOLOv8 was leveraged for object detection on a custom-labeled Roboflow dataset for the hand gestures and a facial emotion recognition model was used to determine fear.
+        Having two features to check for allows the system to confirm distress before automatically triggering a 911 call via Twilio's API. 
+        Having a custom dataset was decided on since we couldn't find an available dataset that had a wide range of hand sizes, hand shades, lighting, and the universal distress signal.
+        This solution was trained on the dataset with iterative accuracy improvements. 
+        Ultimately, it demonstrates how AI can provide life-saving intervention without verbal communication and placed 3rd at HackAI.`,
         achievements: [
-            'Implemented YOLOv8 for real-time object detection to identify universal distress hand gestures on personally labeled data',
-            'Integrated facial emotion recognition model to detect fear and confirm distress situations',
-            'Automated emergency response by connecting to 911 services using Twilio\'s API',
-            'Trained models using custom dataset from Roboflow with continuous accuracy improvements'
+            'Labeled and prepared a custom dataset of universal distress gestures',
+            'Implemented YOLOv8 for low-latency, real-time detection',
+            'Integrated facial emotion recognition for fear detection as a confirmation step',
+            'Automated emergency calls through Twilio API',
+            'Continuously improved model performance via iterative retraining'
         ],
         impact: 'Created a potentially life-saving application that could revolutionize emergency response by providing automatic distress detection in situations where victims cannot verbally call for help.',
         skills: ['Python', 'YOLOv8', 'Computer Vision', 'Machine Learning', 'Twilio API', 'Roboflow', 'TensorFlow'],
@@ -21,7 +33,7 @@ const projects = [
         title: 'PhysioNet Challenge 2025',
         subtitle: 'Machine learning for Chagas disease detection from ECG data',
         tags: ['research', 'ai/ml'],
-        date: 'may 2025 - present',
+        date: 'may 2025 - august 2025',
         description: 'Developed cutting-edge ML algorithms for medical diagnosis, achieving top 20 worldwide ranking.',
         achievements: [
             'Developed open-source machine and deep learning algorithms to detect Chagas disease from 12-lead ECGs',
@@ -39,7 +51,7 @@ const projects = [
         title: 'AwareAbility Technologies',
         subtitle: 'Software development intern - scientific computing & visualization',
         tags: ['develop', 'research'],
-        date: 'may 2025 - present',
+        date: 'may 2025 - august 2025',
         description: 'Modernized complex scientific simulation workflows and created interactive visualizations.',
         achievements: [
             'Converted legacy Geant4 and ROOT-based simulation workflows to modern Python architecture',
@@ -75,7 +87,7 @@ const projects = [
         title: 'Kode With Klossy',
         subtitle: 'Instructor assistant - empowering diversity in tech',
         tags: ['leadership', 'develop'],
-        date: 'march 2025 - present',
+        date: 'march 2025 - august 2025',
         description: 'Teaching web development and fostering inclusive tech culture for underrepresented communities.',
         achievements: [
             'Taught website development to over 60 young women and non-binary individuals',
@@ -93,7 +105,7 @@ const projects = [
         title: 'Elevate Website',
         subtitle: 'Full-stack platform connecting students with opportunities',
         tags: ['develop'],
-        date: '2024',
+        date: 'jan 2025 - april 2025',
         description: 'Built a responsive web platform that earned investor recognition and scholarship funding.',
         achievements: [
             'Developed and deployed responsive web platform connecting users with extracurricular opportunities',
@@ -110,7 +122,7 @@ const projects = [
         id: 'discovery-lab',
         title: 'Discovery Lab - Global (DLG)',
         subtitle: 'Team lead - AI research & education development',
-        tags: ['leadership', 'research', 'ai/ml'],
+        tags: ['leadership', 'ai/ml'],
         date: 'may 2024 - august 2024',
         description: 'Led research team analyzing AI decision-making and developed educational curriculum.',
         achievements: [
@@ -122,7 +134,7 @@ const projects = [
         ],
         impact: 'Advanced AI research understanding while making AI education more accessible to diverse audiences through innovative curriculum design.',
         skills: ['Research Leadership', 'Technical Writing', 'Curriculum Design', 'AI/ML', 'Team Management', 'Educational Development'],
-        category: ['leadership', 'research', 'ai']
+        category: ['leadership', 'ai']
     }
 ];
 
