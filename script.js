@@ -1,3 +1,19 @@
+
+      // Folder animation
+      document.getElementById("folder").addEventListener("click", function () {
+        const folderContainer = document.getElementById("folderContainer");
+        const mainContent = document.getElementById("mainContent");
+        const folder = document.getElementById("folder");
+
+        folder.classList.add("opening");
+
+        setTimeout(() => {
+          folderContainer.classList.add("opened");
+          setTimeout(() => {
+            mainContent.classList.add("visible");
+          }, 300);
+        }, 600);
+      });
 const projects = [
     {
         id: 'distress-detection',
