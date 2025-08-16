@@ -8,105 +8,102 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <!-- Folder -->
-    <div class="folder-container" id="folderContainer">
-      <img
+ <div class="folder-container" id="folderContainer">
+    <img
         src="https://www.macworld.com/wp-content/uploads/2023/12/folder-icon-macos.png?w=1024"
         alt="folder"
         class="folder"
         id="folder"/>
-      <div class="folder-caption">click me</div>
-    </div>
+    <div class="folder-caption">click me</div>
+</div>
         
-    <div class="container">
-        <!-- Hero Section -->
-        <div class="hero">
-            <h1 class="hero-name">cynthia song</h1>
-            <div class="hero-roles">
-                <span class="hero-role">developer</span>
-                <span class="hero-role">ai enthusiast</span>
-                <span class="hero-role">leader</span>
-            </div>
-            <div class="hero-description">
-                there's nothing i love doing more than coding, designing, and working on solutions that improve the lives of others!
-            </div>
+<div class="container" id="mainContent">
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1 class="hero-name">cynthia song</h1>
+        <div class="hero-roles">
+            <span class="hero-role">developer</span>
+            <span class="hero-role">ai enthusiast</span>
+            <span class="hero-role">leader</span>
+        </div>
+        <div class="hero-description">
+            there's nothing i love doing more than coding, designing, and working on solutions that improve the lives of others!
+        </div>
 
-            <div class="quick-links">
-                <h3>in a hurry? here's what i've been doing most recently:</h3>
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <h4>interning as a software engineer @ AwareAbility Technologies</h4>
-                        <p>converting complex simulation workflows to Python & building interactive visualizations for x-ray production analysis</p>
-                    </div>
-                    <div class="contact-card">
-                        <h4>leading business development @ Twocents</h4>
-                        <p>spearheading college expansion across 20 universities & developing strategic CBA models for growth forecasting</p>
-                    </div>
-                    <div class="contact-card">
-                        <h4>mentoring the next generation @ Kode With Klossy</h4>
-                        <p>teaching web development & fostering tech inclusivity for 60+ young women and non-binary individuals</p>
-                    </div>
+        <div class="quick-links">
+            <h3>in a hurry? here's what i've been doing most recently:</h3>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>interning as a software engineer @ AwareAbility Technologies</h4>
+                    <p>converting complex simulation workflows to Python & building interactive visualizations for x-ray production analysis</p>
                 </div>
-            </div>
-
-            <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 2rem;">
-                reach out to me here!
-            </p>
-
-            <div class="contact-links">
-                <a href="mailto:cynthiasong2006@gmail.com"><i class="fas fa-envelope"></i> email me</a>
-                <a href="https://github.com/cynthia-song5" target="_blank"><i class="fab fa-github"></i> github</a>
-<!--                 <a href="tel:614-556-6826"><i class="fas fa-phone"></i> call me</a> -->
+                <div class="contact-card">
+                    <h4>leading business development @ Twocents</h4>
+                    <p>spearheading college expansion across 20 universities & developing strategic CBA models for growth forecasting</p>
+                </div>
+                <div class="contact-card">
+                    <h4>mentoring the next generation @ Kode With Klossy</h4>
+                    <p>teaching web development & fostering tech inclusivity for 60+ young women and non-binary individuals</p>
+                </div>
             </div>
         </div>
 
-        <!-- Work Section -->
-        <div class="work-section">
-            <div class="work-header">
-                <h2 class="work-title">my work ᕕ( ᐛ )ᕗ</h2> <!-- •ᴗ• -->
-                <p style="font-size: 1.2rem; margin-bottom: 2rem;">passion projects & professional experiences!</p>
-<!--                 <p>there's quite a bit on here, so feel free to filter below ;) !</p> -->
-            </div>
+        <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 2rem; color: #1e40af;">
+            reach out to me here!
+        </p>
 
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">all</button>
-                <button class="filter-btn" data-filter="develop">develop</button>
-                <button class="filter-btn" data-filter="ai">AI/ML</button>
-                <button class="filter-btn" data-filter="leadership">leadership</button>
-                <button class="filter-btn" data-filter="research">research</button>
-            </div>
-
-            <div class="projects-grid" id="projectsGrid">
-                <!-- projects populated by JavaScript -->
-            </div>
+        <div class="contact-links">
+            <a href="mailto:cynthiasong2006@gmail.com"><i class="fas fa-envelope"></i> email me</a>
+            <a href="https://github.com/cynthia-song5" target="_blank"><i class="fab fa-github"></i> github</a>
         </div>
     </div>
 
-    <!-- Modal - TO BE UPDATED TO BE MORE LIKE CASE STUDIES -->
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2 class="modal-title"></h2>
-                <p class="modal-subtitle"></p>
-            </div>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <h3>What I Did</h3>
-                    <ul class="modal-list" id="modalAchievements"></ul>
-                </div>
-                <div class="modal-section">
-                    <h3>Impact & Results</h3>
-                    <p id="modalImpact"></p>
-                </div>
-                <div class="skills-section">
-                    <h3>Technologies & Skills Used</h3>
-                    <div class="skills-list" id="modalSkills"></div>
-                </div>
-                <div class="modal-section" id="modalExtra"></div>
-            </div>
+    <!-- Work Section -->
+    <div class="work-section">
+        <div class="work-header">
+            <h2 class="work-title">my work ᕕ( ᐛ )ᕗ</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #475569;">passion projects & professional experiences!</p>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">all</button>
+            <button class="filter-btn" data-filter="develop">develop</button>
+            <button class="filter-btn" data-filter="ai">AI/ML</button>
+            <button class="filter-btn" data-filter="leadership">leadership</button>
+            <button class="filter-btn" data-filter="research">research</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+            <!-- projects populated by JavaScript -->
         </div>
     </div>
-    <script src="script.js"></script>
+</div>
+
+<!-- Modal -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 class="modal-title"></h2>
+            <p class="modal-subtitle"></p>
+        </div>
+        <div class="modal-body">
+            <div class="modal-section">
+                <h3>What I Did</h3>
+                <ul class="modal-list" id="modalAchievements"></ul>
+            </div>
+            <div class="modal-section">
+                <h3>Impact & Results</h3>
+                <p id="modalImpact" style="color: #475569; line-height: 1.6;"></p>
+            </div>
+            <div class="skills-section">
+                <h3>Technologies & Skills Used</h3>
+                <div class="skills-list" id="modalSkills"></div>
+            </div>
+            <div class="modal-section" id="modalExtra"></div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
