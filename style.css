@@ -67,10 +67,8 @@
  .container {
    opacity: 0;
    transform: translateY(50px);
-   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
    background: #f1f5f9;
-   min-height: 100vh;
-   max-width: 1200px;
    margin: 0 auto;
    padding: 2rem;
  }
@@ -90,7 +88,7 @@
    font-size: 4rem;
    font-weight: 900;
    margin-bottom: 1rem;
-   background: linear-gradient(135deg, #2563eb, #1d4ed8);
+   background: linear-gradient(135deg, #7ca1f3, #1d4ed8);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    background-clip: text;
@@ -106,7 +104,7 @@
 
  .hero-role {
    font-size: 1.5rem;
-   color: #2563eb;
+   color: #7ca1f3;
    font-weight: 600;
    padding: 0.5rem 1.5rem;
    background: rgba(37, 99, 235, 0.1);
@@ -116,7 +114,7 @@
  }
 
  .hero-role:hover {
-   background: #2563eb;
+   background: #7ca1f3;
    color: white;
    transform: translateY(-2px);
  }
@@ -181,18 +179,18 @@
  }
 
  .contact-links a {
-   color: #2563eb;
+   color: #7ca1f3;
    text-decoration: none;
    font-size: 1.1rem;
    padding: 0.8rem 1.5rem;
-   border: 2px solid #2563eb;
+   border: 2px solid #7ca1f3;
    border-radius: 25px;
    transition: all 0.3s ease;
    font-weight: 600;
  }
 
  .contact-links a:hover {
-   background: #2563eb;
+   background: #7ca1f3;
    color: white;
    transform: translateY(-2px);
  }
@@ -223,8 +221,8 @@
 
  .filter-btn {
    background: white;
-   border: 2px solid #2563eb;
-   color: #2563eb;
+   border: 2px solid #7ca1f3;
+   color: #7ca1f3;
    padding: 0.8rem 1.5rem;
    border-radius: 25px;
    cursor: pointer;
@@ -235,7 +233,7 @@
 
  .filter-btn:hover,
  .filter-btn.active {
-   background: #2563eb;
+   background: #7ca1f3;
    color: white;
    transform: translateY(-2px);
  }
@@ -265,7 +263,7 @@
  }
 
  .project-header {
-   background: linear-gradient(135deg, #2563eb, #1d4ed8);
+   background: linear-gradient(135deg, #7ca1f3, #1d4ed8);
    color: white;
    padding: 2rem;
    position: relative;
@@ -317,7 +315,7 @@
 
  .project-tag {
    background: rgba(37, 99, 235, 0.1);
-   color: #2563eb;
+   color: #7ca1f3;
    padding: 0.3rem 0.8rem;
    border-radius: 15px;
    font-size: 0.85rem;
@@ -372,7 +370,7 @@
  }
 
  .modal-header {
-   background: linear-gradient(135deg, #2563eb, #1d4ed8);
+   background: linear-gradient(135deg, #7ca1f3, #1d4ed8);
    color: white;
    padding: 3rem;
    position: relative;
@@ -451,7 +449,7 @@
    content: "▶";
    position: absolute;
    left: 0;
-   color: #2563eb;
+   color: #7ca1f3;
    font-size: 0.8rem;
  }
 
@@ -471,7 +469,7 @@
  }
 
  .skill-item {
-   background: #2563eb;
+   background: #7ca1f3;
    color: white;
    padding: 0.5rem 1rem;
    border-radius: 20px;
