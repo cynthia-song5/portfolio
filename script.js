@@ -5,7 +5,7 @@ const projects = [
     subtitle:
       "Emergency response system using computer vision & facial recognition",
     tags: ["ai/ml", "develop"],
-    date: "2024 - present",
+    date: "march 2024",
     description:
       "Built a real-time AI system that detects universal distress hand gestures and facial emotions to automatically call emergency services.",
     achievements: [
@@ -33,15 +33,15 @@ const projects = [
     subtitle:
       "Machine learning for Chagas disease detection from ECG data",
     tags: ["research", "ai/ml"],
-    date: "may 2025 - present",
+    date: "may 2025 - aug 2025",
     description:
       "Developed cutting-edge ML algorithms for medical diagnosis, achieving top 20 worldwide ranking.",
     achievements: [
       "Developed open-source machine and deep learning algorithms to detect Chagas disease from 12-lead ECGs",
       "Utilized large-scale biomedical datasets for the prestigious PhysioNet Challenge 2025",
-      "Improved challenge score (AUROC, AUPRC, Accuracy, F-measure) by 975% using XGBoost model",
+      "Improved challenge score (AUROC, AUPRC, Accuracy, F-measure) by 975% using an XGBoost model",
       "Implemented hybrid feature selection techniques for optimal model performance",
-      "Achieved 18th place worldwide ranking among global research teams",
+      "Achieved 18th place worldwide",
     ],
     impact:
       "Contributed to advancing medical AI diagnostics with potential to improve early detection of Chagas disease, affecting millions globally.",
@@ -61,14 +61,14 @@ const projects = [
     subtitle:
       "Software development intern - scientific computing & visualization",
     tags: ["develop", "research"],
-    date: "may 2025 - present",
+    date: "may 2025 - aug 2025",
     description:
       "Modernized complex scientific simulation workflows and created interactive visualizations.",
     achievements: [
       "Converted legacy Geant4 and ROOT-based simulation workflows to modern Python architecture",
       "Automated post-simulation data analysis pipelines, significantly reducing manual processing time",
       "Developed interactive visualizations for x-ray production efficiency analysis",
-      "Created stakeholder communication tools for complex scientific data",
+      "Improved visualizations for easier stakeholder communication",
       "Optimized simulation parameter analysis for faster insights generation",
     ],
     impact:
@@ -94,10 +94,9 @@ const projects = [
       "Leading strategic business expansion across 20 universities with data-driven financial modeling.",
     achievements: [
       "Led strategy and execution for Twocents' college launch across 20 universities for AU2025",
-      "Coordinated complex partnerships with university services and stakeholders",
+      "Coordinated partnerships with university services and stakeholders",
       "Developed comprehensive CBA (Cost-Benefit Analysis) models using Microsoft Excel",
       "Created financial forecasting systems to identify potential revenue streams",
-      "Established scalable processes for multi-university rollout",
     ],
     impact:
       "Drove strategic growth initiative that expanded company reach to thousands of college students, establishing foundation for sustainable revenue growth.",
@@ -115,7 +114,7 @@ const projects = [
     title: "Kode With Klossy",
     subtitle: "Instructor assistant - empowering diversity in tech",
     tags: ["leadership", "develop"],
-    date: "march 2025 - present",
+    date: "march 2025 - aug 2025",
     description:
       "Teaching web development and fostering inclusive tech culture for underrepresented communities.",
     achievements: [
@@ -149,18 +148,19 @@ const projects = [
     achievements: [
       "Developed and deployed responsive web platform connecting users with extracurricular opportunities",
       "Implemented comprehensive UI/UX verification features for seamless user experience",
-      "Created dual-interface system serving both parents and business partners",
-      "Built scalable architecture to handle multiple user types and use cases",
-      "Presented to investor panel and secured scholarship funding",
+      "Created dual-interface system serving both parents and businesses interested in increased exposure",
+      "Presented to investor panel and received scholarship funding",
     ],
     impact:
-      "Created platform with potential to transform how students discover and engage with extracurricular opportunities, earning investor validation.",
+      "Created platform with potential to transform how students discover and engage with extracurricular opportunities, increasing accessibility to opportunities that impact college admissions",
     skills: [
       "Full-Stack Development",
       "UI/UX Design",
       "Responsive Design",
       "User Experience",
       "Product Development",
+      "User Interviews",
+      "Communication",
     ],
     category: ["develop"],
   },
