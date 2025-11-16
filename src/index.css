@@ -18,31 +18,31 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 13%;
     
-    /* Apple blue #007AFF */
-    --primary: 211 100% 50%;
+    /* Soft indigo/blue palette */
+    --primary: 230 60% 65%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 13%;
+    --secondary: 230 50% 95%;
+    --secondary-foreground: 230 50% 25%;
     
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 230 40% 96%;
+    --muted-foreground: 230 20% 45%;
     
-    --accent: 211 100% 96%;
-    --accent-foreground: 211 100% 50%;
+    --accent: 230 60% 92%;
+    --accent-foreground: 230 60% 40%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 211 100% 50%;
+    --border: 230 30% 88%;
+    --input: 230 30% 88%;
+    --ring: 230 60% 65%;
     
     --radius: 12px;
     
-    /* Custom Apple-style tokens */
-    --apple-blue: 211 100% 50%;
-    --apple-blue-light: 211 100% 96%;
+    /* Custom soft blue/indigo tokens */
+    --soft-indigo: 230 60% 65%;
+    --soft-indigo-light: 230 60% 92%;
     --apple-gray-1: 0 0% 98%;
     --apple-gray-2: 0 0% 96%;
     --apple-gray-3: 0 0% 90%;
@@ -89,17 +89,17 @@ All colors MUST be HSL.
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 98%;
     
-    --primary: 211 100% 50%;
+    --primary: 230 60% 65%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 230 20% 15%;
+    --secondary-foreground: 230 20% 98%;
     
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 230 20% 15%;
+    --muted-foreground: 230 10% 60%;
     
-    --accent: 211 100% 20%;
-    --accent-foreground: 211 100% 80%;
+    --accent: 230 40% 25%;
+    --accent-foreground: 230 60% 80%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;

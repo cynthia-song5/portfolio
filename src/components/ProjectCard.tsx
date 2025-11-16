@@ -13,14 +13,19 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
                  shadow-apple-md hover:shadow-apple-xl transition-all duration-500 
                  hover:-translate-y-2"
     >
-      <div className="bg-primary p-6 md:p-8 text-primary-foreground">
-        <h3 className="text-xl md:text-2xl font-bold mb-2 tracking-tight">
-          {project.title}
-        </h3>
-        <p className="text-sm md:text-base opacity-90">{project.subtitle}</p>
+      {/* Project Preview Image */}
+      <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/30 overflow-hidden">
+        <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+          <span className="text-sm">{project.title}</span>
+        </div>
       </div>
 
       <div className="p-6 md:p-8">
+        <h3 className="text-xl md:text-2xl font-bold mb-2 tracking-tight text-foreground">
+          {project.title}
+        </h3>
+        <p className="text-sm md:text-base text-muted-foreground mb-4">{project.subtitle}</p>
+
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag, index) => (
             <span
@@ -33,11 +38,11 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
           ))}
         </div>
 
-        <div className="text-xs md:text-sm text-apple-gray-5 font-medium mb-3">
+        <div className="text-xs md:text-sm text-muted-foreground font-medium mb-3">
           {project.date}
         </div>
 
-        <p className="text-sm md:text-base text-apple-gray-5 leading-relaxed">
+        <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
           {project.description}
         </p>
       </div>
