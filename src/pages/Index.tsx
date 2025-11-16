@@ -1,28 +1,30 @@
 import { useState } from "react";
 import FolderAnimation from "@/components/FolderAnimation";
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import AboutMe from "@/components/AboutMe";
+import ExperiencesSection from "@/components/ExperiencesSection";
 import WorkSection from "@/components/WorkSection";
 
 const Index = () => {
   const [showContent, setShowContent] = useState(false);
 
   return (
-    <>
+    <div className="min-h-screen">
       {!showContent && <FolderAnimation onOpen={() => setShowContent(true)} />}
       
-      <div
-        className={`transition-all duration-700 ${
-          showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}
-      >
-        {showContent && (
-          <main className="min-h-screen">
+      {showContent && (
+        <div className="animate-fade-in">
+          <Header />
+          <div className="pt-16">
             <Hero />
+            <AboutMe />
+            <ExperiencesSection />
             <WorkSection />
-          </main>
-        )}
-      </div>
-    </>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 

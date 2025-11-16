@@ -55,7 +55,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               {project.achievements.map((achievement, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <span className="text-primary mt-1 font-bold">▶</span>
-                  <span className="text-apple-gray-5 leading-relaxed text-sm md:text-base">
+                  <span className="text-muted-foreground leading-relaxed text-sm md:text-base">
                     {achievement}
                   </span>
                 </li>
@@ -67,7 +67,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground">
               Impact & Results
             </h3>
-            <p className="text-apple-gray-5 leading-relaxed text-sm md:text-base">
+            <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
               {project.impact}
             </p>
           </div>
