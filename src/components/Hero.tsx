@@ -2,9 +2,9 @@ import { Mail, Github } from "lucide-react";
 
 const Hero = () => {
   const roles = [
-    { title: "developer", color: "bg-primary hover:shadow-[0_8px_24px_rgba(0,122,255,0.3)]" },
-    { title: "ai enthusiast", color: "bg-primary hover:shadow-[0_8px_24px_rgba(0,122,255,0.3)]" },
-    { title: "designer", color: "bg-primary hover:shadow-[0_8px_24px_rgba(0,122,255,0.3)]" },
+    { title: "developer", color: "bg-primary/20 text-primary hover:bg-primary hover:text-primary-foreground" },
+    { title: "ai enthusiast", color: "bg-accent/30 text-accent-foreground hover:bg-accent-foreground hover:text-white" },
+    { title: "designer", color: "bg-indigo-light text-indigo-dark hover:bg-indigo hover:text-white" },
   ];
 
   const scrollToWork = () => {
@@ -12,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="text-center px-4 py-16 md:py-24 max-w-5xl mx-auto">
+    <div id="hero-section" className="text-center px-4 py-24 md:py-32 max-w-5xl mx-auto">
       <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground tracking-tight">
         cynthia song
       </h1>
@@ -32,8 +32,8 @@ const Hero = () => {
       </div>
 
       <p className="text-xl md:text-2xl mb-12 text-apple-gray-5 max-w-3xl mx-auto font-medium leading-relaxed">
-        there's nothing i love doing more than coding, designing, and working on
-        solutions that improve the lives of others!
+        there's nothing i love doing more than <span className="text-primary font-semibold">coding</span>, <span className="text-primary font-semibold">designing</span>, and working on
+        solutions that improve the lives of others! ✨
       </p>
 
       <div className="mb-16">

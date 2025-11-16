@@ -24,10 +24,10 @@ const WorkSection = () => {
     <div id="work-section" className="px-4 py-16 max-w-7xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
-          my work ᕕ( ᐛ )ᕗ
+          project playlist ᕕ( ᐛ )ᕗ
         </h2>
         <p className="text-lg md:text-xl text-apple-gray-5">
-          passion projects & professional experiences!
+          passion projects & professional experiences 🎨
         </p>
       </div>
 

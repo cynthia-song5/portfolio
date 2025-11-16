@@ -9,12 +9,16 @@ export interface Project {
   impact: string;
   skills: string[];
   category: string[];
+  image?: string;
+  color?: string;
 }
 
 export const projects: Project[] = [
   {
     id: "distress-detection",
     title: "AI-Powered Universal Distress Signal Detection",
+    image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800&q=80",
+    color: "bg-gradient-to-br from-indigo-400 to-purple-500",
     subtitle: "Emergency response system using computer vision & facial recognition",
     tags: ["ai/ml", "develop"],
     date: "march 2024",
@@ -42,6 +46,8 @@ export const projects: Project[] = [
   {
     id: "biomedical-research",
     title: "PhysioNet Challenge 2025",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+    color: "bg-gradient-to-br from-blue-400 to-cyan-500",
     subtitle: "Machine learning for Chagas disease detection from ECG data",
     tags: ["research", "ai/ml"],
     date: "may 2025 - aug 2025",
@@ -69,6 +75,8 @@ export const projects: Project[] = [
   {
     id: "awareability",
     title: "AwareAbility Technologies",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    color: "bg-gradient-to-br from-violet-400 to-purple-500",
     subtitle: "Software development intern - scientific computing & visualization",
     tags: ["develop", "research"],
     date: "may 2025 - aug 2025",
@@ -96,6 +104,8 @@ export const projects: Project[] = [
   {
     id: "twocents",
     title: "Twocents",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    color: "bg-gradient-to-br from-pink-400 to-rose-500",
     subtitle: "Business development lead - strategic expansion & financial modeling",
     tags: ["leadership", "develop"],
     date: "january 2025 - present",
@@ -121,6 +131,8 @@ export const projects: Project[] = [
   {
     id: "klossy",
     title: "Kode With Klossy",
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80",
+    color: "bg-gradient-to-br from-teal-400 to-emerald-500",
     subtitle: "Instructor assistant - empowering diversity in tech",
     tags: ["leadership", "develop"],
     date: "march 2025 - aug 2025",
@@ -148,6 +160,8 @@ export const projects: Project[] = [
   {
     id: "elevate",
     title: "Elevate Website",
+    image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&q=80",
+    color: "bg-gradient-to-br from-amber-400 to-orange-500",
     subtitle: "Full-stack platform connecting students with opportunities",
     tags: ["develop"],
     date: "2024",
@@ -175,6 +189,8 @@ export const projects: Project[] = [
   {
     id: "discovery-lab",
     title: "Discovery Lab - Global (DLG)",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+    color: "bg-gradient-to-br from-indigo-500 to-blue-600",
     subtitle: "Team lead - AI research & education development",
     tags: ["leadership", "research", "ai/ml"],
     date: "may 2024 - august 2024",
