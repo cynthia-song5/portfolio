@@ -22,29 +22,26 @@ const WorkSection = () => {
 
   return (
     <div id="work-section" className="px-4 py-16 max-w-7xl mx-auto">
-      <div className="text-center mb-16 relative">
-        <div className="absolute -top-8 left-1/4 text-4xl opacity-30 rotate-12">⭐</div>
-        <div className="absolute -top-4 right-1/4 text-3xl opacity-30 -rotate-12">✦</div>
-        
-        <h2 className="text-5xl md:text-7xl font-black mb-4 text-foreground tracking-tighter uppercase">
-          Project Playlist
+      <div className="text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
+          project playlist ᕕ( ᐛ )ᕗ
         </h2>
-        <p className="text-lg md:text-2xl text-apple-gray-5 font-medium">
-          passion projects & professional experiences
+        <p className="text-lg md:text-xl text-apple-gray-5">
+          passion projects & professional experiences 🎨
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-3 mb-16">
+      <div className="flex flex-wrap justify-center gap-3 mb-12">
         {filters.map((filter) => (
           <button
             key={filter.id}
             onClick={() => setActiveFilter(filter.id)}
-            className={`px-6 py-3 rounded-full font-black uppercase transition-all duration-300 
-                       text-xs md:text-sm tracking-wider border-2
+            className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 
+                       text-sm md:text-base
                        ${
                          activeFilter === filter.id
-                           ? "bg-foreground text-background border-foreground shadow-apple-md scale-105 rotate-1"
-                           : "bg-background text-foreground border-border hover:scale-105 hover:shadow-apple-sm hover:-rotate-1"
+                           ? "bg-primary text-primary-foreground shadow-apple-md scale-105"
+                           : "bg-card text-foreground border border-border hover:scale-105 hover:shadow-apple-sm"
                        }`}
           >
             {filter.label}

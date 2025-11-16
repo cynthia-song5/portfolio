@@ -26,24 +26,23 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <button
           onClick={() => scrollToSection("hero-section")}
-          className="text-xl font-black text-foreground hover:text-primary transition-colors tracking-tight"
-          style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
+          className="text-xl font-bold text-foreground hover:text-primary transition-colors"
         >
-          CYNTHIA SONG
+          cynthia song ✨
         </button>
 
         <div className="flex gap-6 items-center">
           <button
             onClick={() => scrollToSection("work-section")}
-            className="text-sm font-bold uppercase text-foreground hover:text-primary transition-colors tracking-wide"
+            className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
           >
-            PROJECTS
+            projects
           </button>
           <a
             href="mailto:cynthiasong2006@gmail.com"
-            className="text-sm font-bold uppercase text-foreground hover:text-primary transition-colors tracking-wide"
+            className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
           >
-            CONTACT
+            contact
           </a>
         </div>
       </nav>

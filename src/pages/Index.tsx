@@ -3,6 +3,7 @@ import FolderAnimation from "@/components/FolderAnimation";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import WorkSection from "@/components/WorkSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const [showContent, setShowContent] = useState(false);
@@ -19,10 +20,11 @@ const Index = () => {
         {showContent && (
           <>
             <Header />
-            <main className="min-h-screen pb-20">
+            <main className="min-h-screen">
               <Hero />
               <WorkSection />
             </main>
+            <Footer />
           </>
         )}
       </div>
