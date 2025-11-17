@@ -1,12 +1,16 @@
+import profilePhoto from "@/assets/profile-photo.jpg";
+
 const AboutMe = () => {
   return (
     <section id="about" className="px-4 py-24 max-w-7xl mx-auto">
       <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
         <div className="relative">
           <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-accent/30 rounded-3xl overflow-hidden shadow-apple-lg">
-            <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-              <span className="text-sm">Your photo here</span>
-            </div>
+            <img 
+              src={profilePhoto} 
+              alt="Cynthia Song" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
         <div>
