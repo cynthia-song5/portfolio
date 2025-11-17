@@ -9,6 +9,7 @@ export interface Project {
   impact: string;
   skills: string[];
   category: string[];
+  image?: string; // Optional custom image for the project
 }
 
 export const projects: Project[] = [

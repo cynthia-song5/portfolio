@@ -14,10 +14,18 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
                  hover:-translate-y-2"
     >
       {/* Project Preview Image */}
-      <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/30 overflow-hidden">
-        <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-          <span className="text-sm">{project.title}</span>
-        </div>
+      <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/30 overflow-hidden relative">
+        {project.image ? (
+          <img 
+            src={project.image} 
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+            <span className="text-sm">{project.title}</span>
+          </div>
+        )}
       </div>
 
       <div className="p-6 md:p-8">
