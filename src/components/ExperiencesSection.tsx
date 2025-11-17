@@ -11,6 +11,16 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    id: "onramp",
+    title: "Innovation Analyst",
+    company: "OnRamp",
+    period: "Sep 2025 - Present",
+    description: "Working with researchers from a Fortune 500 company to determine applications of their research",
+    highlights: [
+      "Applied lean startup and design thinking to conduct strategic market validation for a confidential AI innovation, defining optimal customer segments, and recommended the go-to-market strategy across multiple use cases",
+    ],
+  },
+  {
     id: "awareability",
     title: "Software Development Intern",
     company: "AwareAbility Technologies",
@@ -19,8 +29,8 @@ const experiences: Experience[] = [
     highlights: [
       "Converted legacy Geant4 and ROOT-based simulation workflows to modern Python architecture",
       "Automated post-simulation data analysis pipelines",
-      "Developed interactive visualizations for x-ray production efficiency analysis"
-    ]
+      "Developed interactive visualizations for x-ray production efficiency analysis",
+    ],
   },
   {
     id: "twocents",
@@ -31,8 +41,8 @@ const experiences: Experience[] = [
     highlights: [
       "Led strategy and execution for Twocents' college launch across 20 universities",
       "Developed comprehensive CBA models using Microsoft Excel",
-      "Created financial forecasting systems to identify potential revenue streams"
-    ]
+      "Created financial forecasting systems to identify potential revenue streams",
+    ],
   },
   {
     id: "klossy",
@@ -43,8 +53,8 @@ const experiences: Experience[] = [
     highlights: [
       "Taught website development to over 60 young women and non-binary individuals",
       "Mentored students through hands-on coding projects",
-      "Facilitated Culture-of-Tech sessions focused on accessibility and inclusivity"
-    ]
+      "Facilitated Culture-of-Tech sessions focused on accessibility and inclusivity",
+    ],
   },
   {
     id: "dlg",
@@ -55,9 +65,9 @@ const experiences: Experience[] = [
     highlights: [
       "Led 5-person interdisciplinary team to author technical paper on ChatGPT",
       "Designed AI Fundamentals course curriculum for non-technical learners",
-      "Developed hands-on SmartPong project to make AI concepts accessible"
-    ]
-  }
+      "Developed hands-on SmartPong project to make AI concepts accessible",
+    ],
+  },
 ];
 
 const ExperiencesSection = () => {
@@ -66,12 +76,8 @@ const ExperiencesSection = () => {
   return (
     <section id="experiences" className="px-4 py-16 max-w-7xl mx-auto bg-muted/30">
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
-          experiences
-        </h2>
-        <p className="text-lg md:text-xl text-muted-foreground">
-          professional journey & leadership roles
-        </p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">experiences</h2>
+        <p className="text-lg md:text-xl text-muted-foreground">professional work & leadership</p>
       </div>
 
       <div className="space-y-4">
@@ -87,9 +93,7 @@ const ExperiencesSection = () => {
             >
               <div className="flex justify-between items-start gap-4">
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1">
-                    {exp.title}
-                  </h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1">{exp.title}</h3>
                   <p className="text-lg text-primary font-semibold mb-2">{exp.company}</p>
                   <p className="text-sm text-muted-foreground">{exp.description}</p>
                 </div>
@@ -98,7 +102,7 @@ const ExperiencesSection = () => {
                 </div>
               </div>
             </button>
-            
+
             {expandedId === exp.id && (
               <div className="px-6 md:px-8 pb-6 md:pb-8 animate-accordion-down">
                 <div className="pt-4 border-t border-border">
@@ -107,9 +111,7 @@ const ExperiencesSection = () => {
                     {exp.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-start gap-3">
                         <span className="text-primary mt-1 font-bold">▶</span>
-                        <span className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                          {highlight}
-                        </span>
+                        <span className="text-muted-foreground leading-relaxed text-sm md:text-base">{highlight}</span>
                       </li>
                     ))}
                   </ul>
