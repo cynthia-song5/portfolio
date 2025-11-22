@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Experience {
   id: string;
@@ -72,20 +73,47 @@ const experiences: Experience[] = [
 
 const ExperiencesSection = () => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
 
   return (
-    <section id="experiences" className="px-4 py-16 max-w-7xl mx-auto bg-muted/30">
+    <section id="experiences" className="px-4 py-16 max-w-7xl mx-auto bg-muted/30" ref={ref}>
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">experiences</h2>
         <p className="text-lg md:text-xl text-muted-foreground">professional work & leadership</p>
       </div>
 
       <div className="space-y-4">
-        {experiences.map((exp) => (
-          <div
+        {experiences.map((exp, index) => (
+          <motion.div
             key={exp.id}
             className="bg-card rounded-2xl border border-border shadow-apple-sm hover:shadow-apple-md
                        transition-all duration-300 overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{ y: -2 }}
           >
             <button
               onClick={() => setExpandedId(expandedId === exp.id ? null : exp.id)}
@@ -103,22 +131,36 @@ const ExperiencesSection = () => {
               </div>
             </button>
 
-            {expandedId === exp.id && (
-              <div className="px-6 md:px-8 pb-6 md:pb-8 animate-accordion-down">
-                <div className="pt-4 border-t border-border">
-                  <h4 className="text-lg font-semibold mb-3 text-foreground">Key Highlights</h4>
-                  <ul className="space-y-2">
-                    {exp.highlights.map((highlight, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <span className="text-primary mt-1 font-bold">▶</span>
-                        <span className="text-muted-foreground leading-relaxed text-sm md:text-base">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            )}
-          </div>
+            <AnimatePresence>
+              {expandedId === exp.id && (
+                <motion.div 
+                  className="px-6 md:px-8 pb-6 md:pb-8"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="pt-4 border-t border-border">
+                    <h4 className="text-lg font-semibold mb-3 text-foreground">Key Highlights</h4>
+                    <ul className="space-y-2">
+                      {exp.highlights.map((highlight, idx) => (
+                        <motion.li 
+                          key={idx} 
+                          className="flex items-start gap-3"
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.3, delay: idx * 0.1 }}
+                        >
+                          <span className="text-primary mt-1 font-bold">▶</span>
+                          <span className="text-muted-foreground leading-relaxed text-sm md:text-base">{highlight}</span>
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
         ))}
       </div>
     </section>
