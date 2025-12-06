@@ -1,4 +1,4 @@
-import { X, ExternalLink, Sparkles, Lightbulb, Target, Rocket, BookOpen } from "lucide-react";
+import { X, ExternalLink, Lightbulb, Target, Rocket, BookOpen } from "lucide-react";
 import { Project } from "@/data/projects";
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -84,7 +84,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           </div>
 
           <div className="p-8 md:p-12 space-y-10">
-            {/* The Story */}
+            {/* My Why */}
             <motion.section
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -92,12 +92,12 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-primary/10 rounded-xl">
-                  <Sparkles className="w-5 h-5 text-primary" />
+                  <Lightbulb className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-foreground">The Story</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground">my why</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed text-base md:text-lg italic border-l-4 border-primary/30 pl-6 py-2">
-                "{project.story}"
+              <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
+                {project.story}
               </p>
             </motion.section>
 
@@ -113,7 +113,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                   <div className="p-2 bg-destructive/10 rounded-xl">
                     <Target className="w-5 h-5 text-destructive" />
                   </div>
-                  <h4 className="text-lg font-bold text-foreground">The Problem</h4>
+                  <h4 className="text-lg font-bold text-foreground">the problem</h4>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                   {project.problem}
@@ -123,9 +123,9 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               <div className="bg-muted/50 rounded-2xl p-6 border border-border">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-accent-foreground/10 rounded-xl">
-                    <Lightbulb className="w-5 h-5 text-accent-foreground" />
+                    <Rocket className="w-5 h-5 text-accent-foreground" />
                   </div>
-                  <h4 className="text-lg font-bold text-foreground">The Solution</h4>
+                  <h4 className="text-lg font-bold text-foreground">the solution</h4>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                   {project.solution}
@@ -139,12 +139,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-primary/10 rounded-xl">
-                  <Rocket className="w-5 h-5 text-primary" />
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold text-foreground">What I Built</h3>
-              </div>
+              <h3 className="text-xl md:text-2xl font-bold mb-6 text-foreground">what i built</h3>
               <div className="space-y-4">
                 {project.achievements.map((achievement, index) => (
                   <motion.div
@@ -173,7 +168,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               transition={{ delay: 0.5 }}
             >
               <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground">
-                Impact & Results
+                impact & results
               </h3>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                 {project.impact}
@@ -190,7 +185,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 <div className="p-2 bg-primary/10 rounded-xl">
                   <BookOpen className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-foreground">What I Learned</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground">what i learned</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                 {project.learnings}
@@ -205,7 +200,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               transition={{ delay: 0.7 }}
             >
               <h3 className="text-xl md:text-2xl font-bold mb-6 text-foreground">
-                Technologies & Skills
+                technologies & skills
               </h3>
               <div className="flex flex-wrap gap-2">
                 {project.skills.map((skill, index) => (
