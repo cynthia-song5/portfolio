@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Lightbulb, Code, TrendingUp, GraduationCap, Brain } from "lucide-react";
 
 interface Experience {
   id: string;
@@ -8,6 +9,8 @@ interface Experience {
   period: string;
   description: string;
   highlights: string[];
+  icon: React.ReactNode;
+  color: string;
 }
 
 const experiences: Experience[] = [
@@ -20,6 +23,8 @@ const experiences: Experience[] = [
     highlights: [
       "Applied lean startup and design thinking to conduct strategic market validation for a confidential AI innovation, defining optimal customer segments, and recommended the go-to-market strategy across multiple use cases",
     ],
+    icon: <Lightbulb className="w-6 h-6" />,
+    color: "bg-amber-500",
   },
   {
     id: "awareability",
@@ -32,6 +37,8 @@ const experiences: Experience[] = [
       "Automated post-simulation data analysis pipelines",
       "Developed interactive visualizations for x-ray production efficiency analysis",
     ],
+    icon: <Code className="w-6 h-6" />,
+    color: "bg-blue-500",
   },
   {
     id: "twocents",
@@ -44,6 +51,8 @@ const experiences: Experience[] = [
       "Developed comprehensive CBA models using Microsoft Excel",
       "Created financial forecasting systems to identify potential revenue streams",
     ],
+    icon: <TrendingUp className="w-6 h-6" />,
+    color: "bg-emerald-500",
   },
   {
     id: "klossy",
@@ -56,6 +65,8 @@ const experiences: Experience[] = [
       "Mentored students through hands-on coding projects",
       "Facilitated Culture-of-Tech sessions focused on accessibility and inclusivity",
     ],
+    icon: <GraduationCap className="w-6 h-6" />,
+    color: "bg-pink-500",
   },
   {
     id: "dlg",
@@ -68,6 +79,8 @@ const experiences: Experience[] = [
       "Designed AI Fundamentals course curriculum for non-technical learners",
       "Developed hands-on SmartPong project to make AI concepts accessible",
     ],
+    icon: <Brain className="w-6 h-6" />,
+    color: "bg-violet-500",
   },
 ];
 
@@ -119,14 +132,19 @@ const ExperiencesSection = () => {
               onClick={() => setExpandedId(expandedId === exp.id ? null : exp.id)}
               className="w-full p-6 md:p-8 text-left hover:bg-accent/50 transition-colors duration-200"
             >
-              <div className="flex justify-between items-start gap-4">
-                <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1">{exp.title}</h3>
-                  <p className="text-lg text-primary font-semibold mb-2">{exp.company}</p>
-                  <p className="text-sm text-muted-foreground">{exp.description}</p>
+              <div className="flex items-start gap-4 md:gap-6">
+                <div className={`${exp.color} p-3 md:p-4 rounded-xl text-white shrink-0 shadow-lg`}>
+                  {exp.icon}
                 </div>
-                <div className="text-right">
-                  <p className="text-sm font-medium text-muted-foreground">{exp.period}</p>
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-1 md:gap-4">
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1">{exp.title}</h3>
+                      <p className="text-lg text-primary font-semibold mb-2">{exp.company}</p>
+                    </div>
+                    <p className="text-sm font-medium text-muted-foreground shrink-0">{exp.period}</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{exp.description}</p>
                 </div>
               </div>
             </button>
