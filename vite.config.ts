@@ -5,8 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Use "/" for AWS Amplify (root domain), or "/cynthiasportfolio/" for GitHub Pages
-  base: "/",
+  base: "/cynthiasportfolio/",
   server: {
     host: "::",
     port: 8080,
