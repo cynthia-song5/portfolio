@@ -52,11 +52,12 @@ export const projects: Project[] = [
       "TensorFlow",
     ],
     category: ["ai", "develop"],
+    image: "https://moody-challenge.physionet.org/assets/img/ecg-ml.gif",
   },
   {
     id: "biomedical-research",
     title: "PhysioNet Challenge 2025",
-    subtitle: "Machine learning for Chagas disease detection from ECG data",
+    subtitle: "AI Research Intern",
     tags: ["research", "ai/ml"],
     date: "may 2025 - aug 2025",
     description:
@@ -86,11 +87,12 @@ export const projects: Project[] = [
       "Scikit-learn",
     ],
     category: ["research", "ai"],
+    image: "https://moody-challenge.physionet.org/assets/img/ecg-ml.gif",
   },
   {
     id: "awareability",
     title: "AwareAbility Technologies",
-    subtitle: "Software development intern - scientific computing & visualization",
+    subtitle: "Software Development Intern",
     tags: ["develop", "research"],
     date: "may 2025 - aug 2025",
     description:
@@ -124,7 +126,7 @@ export const projects: Project[] = [
   {
     id: "twocents",
     title: "Twocents",
-    subtitle: "Business development lead - strategic expansion & financial modeling",
+    subtitle: "Business Development Lead",
     tags: ["leadership", "develop"],
     date: "Jan 2025 - present",
     description:
@@ -158,7 +160,7 @@ export const projects: Project[] = [
   {
     id: "klossy",
     title: "Kode With Klossy",
-    subtitle: "Instructor assistant - empowering diversity in tech",
+    subtitle: "Instructor Assistant",
     tags: ["leadership", "develop"],
     date: "march 2025 - aug 2025",
     description:
@@ -188,6 +190,7 @@ export const projects: Project[] = [
       "Diversity & Inclusion",
     ],
     category: ["leadership", "develop"],
+    image: "https://media.licdn.com/dms/image/v2/C4E0BAQEXJRCrIzGB_A/company-logo_200_200/company-logo_200_200/0/1676314797072/kodewithklossy_logo?e=2147483647&v=beta&t=DQAinu9tltfa7hPzva6t__t5Ayoa2bUK1VNA80I-5wg",
   },
   {
     id: "elevate",
@@ -226,7 +229,7 @@ export const projects: Project[] = [
   {
     id: "discovery-lab",
     title: "Discovery Lab - Global (DLG)",
-    subtitle: "Team lead - AI research & education development",
+    subtitle: "AI Research Intern",
     tags: ["leadership", "research", "ai/ml"],
     date: "may 2024 - august 2024",
     description:
@@ -257,4 +260,38 @@ export const projects: Project[] = [
     ],
     category: ["leadership", "research", "ai"],
   },
+  {
+  id: "loop",
+  title: "Loop",
+  subtitle: "Community lending platform - frontend development",
+  tags: ["develop", "ai/ml"],
+  date: "Sep 2025 - present",
+  description:
+    "Developed a platform connecting neighbors to borrow and lend items, with real-time matching and a credit-based reward system.",
+  story:
+    "Loop is designed to make local lending and borrowing easy and secure. I contributed mainly on the frontend, building user interfaces and integrating features like real-time notifications and inventory management.",
+  problem:
+    "Many communities lack simple ways to share resources locally. Users need a platform that handles requests, matches lenders and borrowers, and tracks transactions securely.",
+  solution:
+    "I implemented the frontend in React, integrated Firebase for authentication, database, and real-time updates, and built responsive pages for browsing items, managing loans, and handling notifications.",
+  achievements: [
+    "Built responsive UI using React and Material-UI components",
+    "Integrated Firebase for authentication, database, and real-time updates",
+    "Implemented credit system, loan tracking, and rating workflows",
+    "Worked on location-based search and secure meetup verification",
+  ],
+  impact:
+    "Loop allows community members to share resources efficiently, track loans, and build trust through a credit and rating system.",
+  learnings:
+    "I gained experience with React, Firebase, real-time data synchronization, and designing interfaces for complex workflows while keeping them intuitive for users.",
+  skills: [
+    "React",
+    "Material-UI",
+    "Firebase",
+    "Frontend Development",
+    "Real-time Data",
+    "UI/UX Design",
+  ],
+  category: ["develop", "ai"],
+},
 ];
