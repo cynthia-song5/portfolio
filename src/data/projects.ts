@@ -96,27 +96,27 @@ export const projects: Project[] = [
     description:
       "Modernized complex scientific simulation workflows and created interactive visualizations.",
     story:
-      "Joining AwareAbility, I walked into a world of physics simulations and legacy code. The scientists had brilliant work trapped in outdated systems. My mission: liberate their data and make it dance.",
+      "At AwareAbility, I worked with legacy Geant4/ROOT workflows that were slowing down analysis. I focused on modernizing pipelines so scientists could spend less time on setup and more on interpreting results.",
     problem:
-      "Researchers were spending more time wrestling with Geant4 and ROOT—tools from the 90s—than actually analyzing their results. Data was siloed, workflows were manual, and insights were buried in terminal outputs.",
+      "Simulation workflows were slow and fragmented. Researchers spent hours converting outputs manually before they could analyze anything.",
     solution:
-      "I rebuilt the entire pipeline in Python. From simulation configuration to final visualization, everything now flows through modern, maintainable code with beautiful interactive plots that reveal what the data is really saying.",
+      "I rewrote the pipelines in Python, automated the data processing, and built interactive Plotly visualizations to make results more accessible and interpretable.",
     achievements: [
-      "Converted legacy Geant4/ROOT workflows to clean Python architecture",
-      "Built automated pipelines that reduced analysis time from hours to minutes",
-      "Created interactive Plotly visualizations that stakeholders actually understood",
-      "Developed reusable simulation parameter optimization framework",
+      "Converted Geant4/ROOT workflows into Python scripts with automated processing",
+      "Developed reusable plotting functions and visualizations for technical & non-technical stakeholders to understand",
+      "Reduced analysis time from hours to minutes",
+      "Built a framework for simulation parameter optimization",
     ],
     impact:
-      "Scientists now spend their time doing science, not debugging code. The visualizations I built are being used in presentations to potential partners and investors.",
+      "The updates allowed researchers to analyze data faster and communicate findings more effectively to partners and investors.",
     learnings:
-      "Legacy code isn't just about technology—it's about understanding why decisions were made. I learned to respect the old while building the new, and that the best solutions often come from deeply understanding the problem domain.",
+      "I gained experience with scientific computing, automation, and the challenge of translating complex workflows into maintainable code.",
     skills: [
       "Python",
       "Geant4",
       "ROOT",
+      "Plotly",
       "Data Visualization",
-      "Scientific Computing",
       "Automation",
     ],
     category: ["develop", "research"],
@@ -126,25 +126,25 @@ export const projects: Project[] = [
     title: "Twocents",
     subtitle: "Business development lead - strategic expansion & financial modeling",
     tags: ["leadership", "develop"],
-    date: "january 2025 - present",
+    date: "Jan 2025 - present",
     description:
-      "Leading strategic business expansion across 20 universities with data-driven financial modeling.",
+      "Building a private feedback platform connecting students and businesses with actionable insights.",
     story:
-      "Twocents was ready to scale, but scaling a startup isn't just about enthusiasm—it's about strategy. When I joined as Business Development Lead, I asked: how do we grow fast without growing reckless?",
+      "Twocents was designed to improve the feedback loop between customers and businesses while keeping negative feedback private. I led the development and product strategy.",
     problem:
-      "College expansion is expensive and risky. Each university has different cultures, regulations, and student needs. How do you prioritize? How do you predict what works?",
+      "Businesses struggle to get honest, actionable feedback from customers without risking reputational harm, while customers want a safe way to share insights.",
     solution:
       "I built comprehensive financial models that turned uncertainty into actionable strategy. Cost-benefit analyses for each potential market, revenue forecasting that accounted for seasonality, and partnership frameworks that could scale.",
     achievements: [
       "Designed launch strategy for 20 universities across different regions",
-      "Built Excel-based CBA models adopted as company-wide decision framework",
-      "Established partnerships with university organizations and local businesses",
-      "Created revenue forecasting system with 85%+ accuracy on pilot markets",
+      "Built financial and cost-benefit analysis models adopted company-wide",
+      "Established partnerships with student organizations and local businesses",
+      "Created revenue forecasting system with 85%+ accuracy for pilot markets",
     ],
     impact:
-      "The models I built don't just guide where we launch—they shape how we think about growth. Every strategic decision now has data behind it.",
+      "My work helps guide Twocents’ expansion, ensuring strategic growth backed by data and sustainable partnerships.",
     learnings:
-      "Startups move fast, but sustainable growth requires thinking slow. I learned that the best business decisions come from balancing intuition with rigorous analysis, and that clear communication can turn complex models into company-wide alignment.",
+      "I learned how to translate data into actionable business strategy and the importance of balancing speed with structured planning in a startup environment.",
     skills: [
       "Strategic Planning",
       "Financial Modeling",
@@ -153,7 +153,7 @@ export const projects: Project[] = [
       "Project Management",
     ],
     category: ["leadership"],
-    image: "/src/assets/projects/twocents.png",
+    image: "https://www.twocents.io/opengraph-image.png?db26bcde0973fa3b",
   },
   {
     id: "klossy",
@@ -164,11 +164,11 @@ export const projects: Project[] = [
     description:
       "Teaching web development and fostering inclusive tech culture for underrepresented communities.",
     story:
-      "I remember being one of few girls in my first CS class, wondering if I belonged. Kode With Klossy gave me the chance to be the mentor I wish I had—to show young women and non-binary students that they absolutely belong.",
+      "I remember being one of few girls in my computer science classes and felt like I didn't belong. Kode With Klossy gave me a community, showed me how creativity can intersect with problem-solving, and gave me the opportunity to give back to the community through mentorship.",
     problem:
       "Tech has a diversity problem, and it starts early. Young people from underrepresented groups often lack role models, resources, and communities that make them feel welcome in technology.",
     solution:
-      "More than just teaching code, I focused on building confidence. Every debugging session became a lesson in problem-solving mindset. Every project became proof that they could build real things.",
+      "More than just teaching code, I focused on building confidence. I made sure to meet students where they were at and push them, but not overwhelm them. I wanted each student to feel like they were a part of the larger community through interactive activities, personalized teaching, and open discussions.",
     achievements: [
       "Taught 60+ students HTML, CSS, JavaScript, and React fundamentals",
       "Developed adaptive curriculum materials for different learning styles",
@@ -176,9 +176,9 @@ export const projects: Project[] = [
       "Mentored students through complete project builds from idea to deployment",
     ],
     impact:
-      "Watching a student's face light up when their first website goes live—that's the impact. Some of my students are now applying to CS programs. Others discovered they love design. All of them know they can code.",
+      "Students gained confidence and developed websites they were proud of with only a week! They gained experience working with teams, and some even decided to change their majors to computer science after realizing it isn't so intimidating after all :).",
     learnings:
-      "Teaching taught me to code. When you have to explain something to a beginner, you realize what you truly understand versus what you just memorized. I also learned that the best teachers aren't the ones with all the answers—they're the ones who help students find their own.",
+      "Teaching taught me to code. When you have to explain something to a beginner, you realize what you truly understand versus what you just memorized. I also learned how to adapt my teaching to challenge students of different skill levels without overwhelming them.",
     skills: [
       "HTML/CSS",
       "JavaScript",
@@ -202,7 +202,7 @@ export const projects: Project[] = [
     problem:
       "Students, especially first-generation ones, often miss life-changing opportunities simply because they don't know they exist. Parents want to help but don't know where to look. The information asymmetry creates unfair advantages.",
     solution:
-      "I built Elevate—a platform that aggregates opportunities and matches them to student profiles. Dual interfaces serve both students seeking opportunities and organizations wanting to reach diverse talent pools.",
+      "I built Elevate, a platform that aggregates opportunities and matches them to student profiles. Dual interfaces serve both students seeking opportunities and organizations wanting to reach diverse talent pools.",
     achievements: [
       "Designed and built full-stack platform with responsive UI",
       "Created dual-interface system for students and opportunity providers",
