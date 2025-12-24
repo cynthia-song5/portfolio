@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const basename = import.meta.env.PROD ? "/cynthiasportfolio" : "/";
+const basename = import.meta.env.PROD ? "/portfolio" : "/";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
