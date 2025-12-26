@@ -29,18 +29,18 @@ const Header = () => {
             about
           </a>
           <a 
-            href="#experiences" 
-            onClick={(e) => handleScroll(e, '#experiences')}
-            className="text-foreground hover:text-primary transition-all duration-300 font-medium relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
-          >
-            experiences
-          </a>
-          <a 
             href="#work" 
             onClick={(e) => handleScroll(e, '#work')}
             className="text-foreground hover:text-primary transition-all duration-300 font-medium relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
           >
             work
+          </a>
+          <a 
+            href="#projects" 
+            onClick={(e) => handleScroll(e, '#projects')}
+            className="text-foreground hover:text-primary transition-all duration-300 font-medium relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
+          >
+            projects
           </a>
         </nav>
       </div>

@@ -3,8 +3,8 @@ import FolderAnimation from "@/components/FolderAnimation";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
-import ExperiencesSection from "@/components/ExperiencesSection";
 import WorkSection from "@/components/WorkSection";
+import ProjectsSection from "@/components/ProjectsSection";
 
 const Index = () => {
   const [showContent, setShowContent] = useState(false);
@@ -19,8 +19,8 @@ const Index = () => {
           <div className="pt-16">
             <Hero />
             <AboutMe />
-            <ExperiencesSection />
             <WorkSection />
+            <ProjectsSection />
           </div>
         </div>
       )}
