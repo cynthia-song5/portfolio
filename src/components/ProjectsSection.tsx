@@ -37,6 +37,30 @@ const personalProjects: Project[] = [
     description: "Built a responsive web platform that earned investor recognition and scholarship funding, helping students discover life-changing opportunities.",
     skills: ["Full-Stack Development", "UI/UX Design", "Responsive Design", "Product Development"],
   },
+  {
+    id: "business-builders",
+    title: "Business Builders Website",
+    subtitle: "Full-stack development & UI/UX design for bbosu.org",
+    period: "2024",
+    description: "Collaborated on full-stack development and UI/UX design, creating wireframes in Figma and implementing responsive features. Increased site and club engagement after redesigning, leading to a ~30% increase in recruitment.",
+    skills: ["React", "Node.js", "Supabase", "Figma", "UI/UX Design", "Full-Stack Development"],
+  },
+  {
+    id: "ev-charging",
+    title: "EV Charging Station Data Analysis",
+    subtitle: "Geospatial data analysis for EV infrastructure",
+    period: "2024",
+    description: "Worked with large EV infrastructure datasets, cleaning and analyzing geospatial and network data (lat/long, station types, charger levels) to support exploration and visualization.",
+    skills: ["Data Analysis", "Geospatial Data", "Data Cleaning", "Python", "Data Visualization"],
+  },
+  {
+    id: "awareability-iot",
+    title: "IoT Sensor Simulation & Data Visualization",
+    subtitle: "AwareAbility Technologies",
+    period: "2024",
+    description: "Developed IoT sensor simulation and data visualization tools to support accessibility technology research and development.",
+    skills: ["IoT", "Data Visualization", "Simulation", "Python", "Sensor Data"],
+  },
 ];
 
 const ProjectsSection = () => {
