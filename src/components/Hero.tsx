@@ -1,4 +1,4 @@
-import { Mail, Github } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -106,6 +106,19 @@ const Hero = () => {
         >
           <Github size={20} />
           github
+        </motion.a>
+        <motion.a
+          href="https://www.linkedin.com/in/cynthia-song-/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-card text-foreground rounded-full 
+                     font-semibold border border-border transition-all duration-300 
+                     hover:shadow-apple-md"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Linkedin size={20} />
+          linkedin
         </motion.a>
       </motion.div>
     </section>
