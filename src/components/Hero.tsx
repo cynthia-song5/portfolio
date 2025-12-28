@@ -41,7 +41,7 @@ const Hero = () => {
       </motion.h1>
 
       <div className="flex justify-center gap-4 md:gap-6 mb-8 flex-wrap">
-        {["developer", "ai enthusiast", "designer"].map((role, index) => (
+        {["developer", "learner", "designer"].map((role, index) => (
           <motion.span
             key={role}
             className="px-6 py-3 rounded-full font-semibold
@@ -111,9 +111,8 @@ const Hero = () => {
           href="https://www.linkedin.com/in/cynthia-song-/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-card text-foreground rounded-full 
-                     font-semibold border border-border transition-all duration-300 
-                     hover:shadow-apple-md"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full 
+                     font-semibold transition-all duration-300 hover:shadow-apple-lg"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

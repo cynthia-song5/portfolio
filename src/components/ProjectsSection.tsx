@@ -7,6 +7,7 @@ interface Project {
   subtitle: string;
   period: string;
   description: string;
+  impact: string;
   image?: string;
   skills: string[];
 }
@@ -18,6 +19,7 @@ const personalProjects: Project[] = [
     subtitle: "Emergency response system using computer vision & facial recognition",
     period: "March 2024",
     description: "Built a real-time AI system that detects universal distress hand gestures and facial emotions to automatically call emergency services.",
+    impact: "Created life-saving technology for emergency detection",
     image: "https://moody-challenge.physionet.org/assets/img/ecg-ml.gif",
     skills: ["Python", "YOLOv8", "Computer Vision", "Machine Learning", "Twilio API"],
   },
@@ -27,6 +29,7 @@ const personalProjects: Project[] = [
     subtitle: "Community lending platform - frontend development",
     period: "Sep 2025 - Present",
     description: "Developed a platform connecting neighbors to borrow and lend items, with real-time matching and a credit-based reward system.",
+    impact: "Building sustainable community sharing economy",
     skills: ["React", "Material-UI", "Firebase", "Frontend Development", "Real-time Data"],
   },
   {
@@ -35,6 +38,7 @@ const personalProjects: Project[] = [
     subtitle: "Full-stack platform connecting students with opportunities",
     period: "2024",
     description: "Built a responsive web platform that earned investor recognition and scholarship funding, helping students discover life-changing opportunities.",
+    impact: "Secured investor recognition & scholarship funding",
     skills: ["Full-Stack Development", "UI/UX Design", "Responsive Design", "Product Development"],
   },
   {
@@ -42,7 +46,8 @@ const personalProjects: Project[] = [
     title: "Business Builders Website",
     subtitle: "Full-stack development & UI/UX design for bbosu.org",
     period: "2024",
-    description: "Collaborated on full-stack development and UI/UX design, creating wireframes in Figma and implementing responsive features. Increased site and club engagement after redesigning, leading to a ~30% increase in recruitment.",
+    description: "Collaborated on full-stack development and UI/UX design, creating wireframes in Figma and implementing responsive features.",
+    impact: "~30% increase in club recruitment after redesign",
     skills: ["React", "Node.js", "Supabase", "Figma", "UI/UX Design", "Full-Stack Development"],
   },
   {
@@ -51,6 +56,7 @@ const personalProjects: Project[] = [
     subtitle: "Geospatial data analysis for EV infrastructure",
     period: "2024",
     description: "Worked with large EV infrastructure datasets, cleaning and analyzing geospatial and network data (lat/long, station types, charger levels) to support exploration and visualization.",
+    impact: "Enabled data-driven EV infrastructure decisions",
     skills: ["Data Analysis", "Geospatial Data", "Data Cleaning", "Python", "Data Visualization"],
   },
   {
@@ -59,6 +65,7 @@ const personalProjects: Project[] = [
     subtitle: "AwareAbility Technologies",
     period: "2024",
     description: "Developed IoT sensor simulation and data visualization tools to support accessibility technology research and development.",
+    impact: "Advanced accessibility technology research",
     skills: ["IoT", "Data Visualization", "Simulation", "Python", "Sensor Data"],
   },
 ];
@@ -142,7 +149,26 @@ const ProjectsSection = () => {
                         {project.title}
                       </h3>
                       <p className="text-primary font-semibold mb-2">{project.subtitle}</p>
-                      <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
+                      <p className="text-sm text-muted-foreground mb-3">{project.description}</p>
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-xs font-bold uppercase tracking-wider text-primary/80">Impact:</span>
+                        <span className="text-sm font-medium text-foreground">{project.impact}</span>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {project.skills.slice(0, 4).map((skill, idx) => (
+                          <span 
+                            key={idx} 
+                            className="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-xs font-medium"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                        {project.skills.length > 4 && (
+                          <span className="px-2 py-0.5 bg-muted text-muted-foreground rounded-full text-xs font-medium">
+                            +{project.skills.length - 4} more
+                          </span>
+                        )}
+                      </div>
                     </div>
                     <div className="text-right flex-shrink-0">
                       <p className="text-sm font-medium text-muted-foreground">{project.period}</p>
